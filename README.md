@@ -17,10 +17,11 @@ Specifically, this test will assess your ability to:
 
 ### Preparation
 To avoid constrains during the 1h interview, the following steps can be done prior:
-
+- Download the given repository
 - Setup a Git Repository for your code.
 - Access the data and inspect the formats
 - Setup your environment
+- Ensure your username variable is setup in the .env (you need to create)
 - # ENSURE EVERY HELPER (Copilot, ChatGPT, etc... is disabled)
 
 ### Data
@@ -50,6 +51,7 @@ The dashboard should enable monitoring of key metrics such as:
 3. Duplicate Entries – Detect and analyze duplication patterns in the datasets.
 
 🧭 The dashboard can be developed within a Jupyter Notebook, and it should be able to read from pre-computed intermediate files if needed.
+-
 
 ### ⚙️ Deliverables & Execution
 Package your full project in a local Docker container.
@@ -67,6 +69,12 @@ Run the container to generate the final dataset.
 Execute the notebook cells to display your dashboard.
 
 💡 Tip: You may persist intermediate outputs (e.g., CSV or Parquet files) for reuse within the dashboard.
+
+### Final Data Format
+
+- Columns with allowed null values: [cip7_code, cip13_code, dosage, condition_d_prescription] (the remaining columns should not contains null values)
+- Ensure correct column formats: [int, float, object]
+- The final table should contain only the columns: [`cis_code`, `denomination_du_medicament`, `form_pharmaceutique`, `cip7_code`, `titulaire`, `survaillance_reinforce`, `cip13_code`, `pharma_element`, `code_de_substance`, `nom_de_substance`, `dosage`, `condition_d_prescription`]
 
 ### Data Linkage Chart
 
@@ -89,6 +97,7 @@ The following diagram illustrates the intended relationship between the differen
 - When reading the data files:
   1. Inspect Encoding
   2. Inspect seprators format
+
 
 # French Version
 
@@ -171,6 +180,15 @@ Développez votre tableau de bord dans un notebook exécutable après le pipelin
 3. Exécuter les cellules du notebook afin d’afficher le tableau de bord.
 
 💡 Astuce : vous pouvez enregistrer des sorties intermédiaires (fichiers CSV, Parquet, etc.) pour réutilisation dans le tableau de bord.
+
+### Format Final des Données
+- Colonnes autorisant des valeurs nulles : [cip7_code, cip13_code, dosage, condition_d_prescription] (les autres colonnes ne doivent pas contenir de valeurs nulles)
+
+- Vérifier le format correct des colonnes : [int, float, object]
+
+- Le tableau final doit contenir uniquement les colonnes : [`cis_code`, `denomination_du_medicament`, `form_pharmaceutique`, `cip7_code`, `titulaire`, `survaillance_reinforce`, `cip13_code`, `pharma_element`, `code_de_substance`, `nom_de_substance`, `dosage`, `condition_d_prescription`]
+
+
 
 ### 🗺️ Schéma de liaison des données
 
