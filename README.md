@@ -29,7 +29,7 @@ To avoid constrains during the 1h interview, the following steps can be done pri
 
 | Dataset          | Description                   | Location                                                                                          |
 | ---------------- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
-| `CIS_bdpm`       | Medicinal product reference   | `s3://data-eng-interviews/CIS_bdpm.txt`                                                           |
+| `CIS_bdpm`       | Medicinal product reference   | `s3://data-eng-interviews/CIS_bdpm.txt` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_bdpm.txt`) |                                                          |
 | `CIS_CIP_bdpm`   | Product packaging and codes   | `s3://data-eng-interviews/CIS_CIP_bdpm.parquet`                                                   |
 | `CIS_COMPO_bdpm` | Product composition details   | `s3://data-eng-interviews/CIS_COMPO_bdpm.csv`                                                     |
 | `CIS_CPD_bdpm`   | Public medication information | `https://base-donnees-publique.medicaments.gouv.fr/download/file/CIS_CPD_bdpm.txt`                |
