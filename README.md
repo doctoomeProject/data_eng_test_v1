@@ -31,7 +31,7 @@ To avoid constrains during the 1h interview, the following steps can be done pri
 | ---------------- | ----------------------------- | ------------------------------------------------------------------------------------------------- |
 | `CIS_bdpm`       | Medicinal product reference   | `s3://data-eng-interviews/CIS_bdpm.txt` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_bdpm.txt`) |                                                          |
 | `CIS_CIP_bdpm`   | Product packaging and codes   | `s3://data-eng-interviews/CIS_CIP_bdpm.parquet` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_CIP_bdpm.parquet`)|
-| `CIS_COMPO_bdpm` | Product composition details   | `s3://data-eng-interviews/CIS_COMPO_bdpm.csv` or (`https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_COMPO_bdpm.csv`)|
+| `CIS_COMPO_bdpm` | Product composition details   | `s3://data-eng-interviews/CIS_COMPO_bdpm.csv` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_COMPO_bdpm.csv`)|
 | `CIS_CPD_bdpm`   | Public medication information | `https://base-donnees-publique.medicaments.gouv.fr/download/file/CIS_CPD_bdpm.txt`                |
 
 
@@ -85,6 +85,10 @@ The following diagram illustrates the intended relationship between the differen
 | **Reproducibility**                | Dockerization and ease of setup/run                   |
 | **Version Control**                | Commit quality, branching, and GitHub organization    |
 
+### Helpfull Tips:
+- When reading the data files:
+  1. Inspect Encoding
+  2. Inspect seprators format
 
 # French Version
 
@@ -124,9 +128,9 @@ Afin d’éviter toute contrainte pendant l’entretien (durée : 1 heure), les 
 
 | Dataset          | Description                        | Location                                                                                          |
 | ---------------- | -----------------------------------| ------------------------------------------------------------------------------------------------- |
-| `CIS_bdpm`       | Référentiel des produits médicaux  | `s3://data-eng-interviews/CIS_bdpm.txt`                                                           |
-| `CIS_CIP_bdpm`   | Codes et conditionnements produits | `s3://data-eng-interviews/CIS_CIP_bdpm.parquet`                                                   |
-| `CIS_COMPO_bdpm` | Détails de composition des produits| `s3://data-eng-interviews/CIS_COMPO_bdpm.csv`                                                     |
+| `CIS_bdpm`       | Référentiel des produits médicaux  | `s3://data-eng-interviews/CIS_bdpm.txt` (ou `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_bdpm.txt`)|
+| `CIS_CIP_bdpm`   | Codes et conditionnements produits | `s3://data-eng-interviews/CIS_CIP_bdpm.parquet` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_CIP_bdpm.parquet`)|
+| `CIS_COMPO_bdpm` | Détails de composition des produits| `s3://data-eng-interviews/CIS_COMPO_bdpm.csv` (or `https://data-eng-interviews.s3.eu-west-3.amazonaws.com/CIS_COMPO_bdpm.csv`)|
 | `CIS_CPD_bdpm`   | Public medication information      | `https://base-donnees-publique.medicaments.gouv.fr/download/file/CIS_CPD_bdpm.txt`                |
 
 ### 🧩 Tâche principale
@@ -182,3 +186,8 @@ Le diagramme ci-dessous illustre la relation attendue entre les différentes sou
 | **Analyse & Visualisation**        | Pertinence et lisibilité du tableau de bord                 |
 | **Reproductibilité**               | Maîtrise de Docker et simplicité d’exécution                |
 | **Versionnement**                  | Qualité des commits, branches et organisation sur GitHub    |
+
+## Conseils utiles:
+- Lors de la lecture des fichiers de données:
+  1. Vérifiez l’encodage
+  2. Vérifiez le format des séparateurs
