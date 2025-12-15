@@ -8,7 +8,7 @@ username = os.getenv("USERNAME")
 def medication_merged():
     """Load the processed parquet file once for all tests."""
 
-    path = f"../results/{username}.parquet"
+    path = f"results/final.parquet"
     df = pd.read_parquet(path)
     return df
 

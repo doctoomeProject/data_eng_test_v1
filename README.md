@@ -38,8 +38,8 @@ To avoid constrains during the 1h interview, the following steps can be done pri
 
 ### 🧩 Main Task
 You must clean, transform, and merge the four datasets into a single consolidated table.
-Once the final table is ready, upload it to:
-`s3://data-eng-interviews/results/{your_name}/`
+Once the final table is ready, save it into a folder called results such has:
+`data-eng-interviews/results/final.parquet`
 
 Your code should be structured, efficient, and easily reproducible.
 
@@ -147,8 +147,8 @@ Afin d’éviter toute contrainte pendant l’entretien (durée : 1 heure), les 
 ### 🧩 Tâche principale
 
 Nettoyez, transformez et fusionnez les quatre jeux de données en une table finale consolidée.
-Une fois cette table créée, chargez-la sur :
-`s3://data-eng-interviews/results/{your_name}/`
+Une fois la table finale prête, enregistrez-la dans un dossier appelé results, par exemple :
+`data-eng-interviews/results/final.parquet`
 
 Votre code doit être structuré, efficace et facilement reproductible.
 
