@@ -99,6 +99,7 @@ The following diagram illustrates the intended relationship between the differen
 - When reading the data files:
   1. Inspect Encoding
   2. Inspect seprators format
+  3. Column Names can be found in the `config.py`
 
 
 # French Version
@@ -213,3 +214,4 @@ Le diagramme ci-dessous illustre la relation attendue entre les différentes sou
 - Lors de la lecture des fichiers de données:
   1. Vérifiez l’encodage
   2. Vérifiez le format des séparateurs
+  3. Les noms de colonnes se trouvent dans le `config.py`
