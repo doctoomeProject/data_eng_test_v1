@@ -4,24 +4,21 @@
 
 ### 🎯 Objective
 The purpose of this challenge is to demonstrate your end-to-end data engineering and analytical skills.
-You will design a small but complete data pipeline — from sourcing heterogeneous data to cleaning, transforming, merging, and finally analyzing it — all within a reproducible Dockerized environment.
+You will design a small but complete data pipeline — from sourcing heterogeneous data to cleaning, transforming, merging, and store it — all within a notebook or python script.
 
 Specifically, this test will assess your ability to:
 
 1 - Source data from multiple file types and locations (CSV, TXT, Parquet, remote URLs, and S3).
 2 - Understand and clean complex data structures, handling missing, inconsistent, or duplicated entries.
 3 - Write clean, modular, and functional code with appropriate documentation and organization.
-4 - Monitor and analyze data quality using reproducible metrics and visualizations.
-5 - Containerize your project for local execution using Docker.
-6 - Version your work effectively on GitHub.
+4 - Store your your final dataset in the results folder. Name it final.parquet and run tests.
 
 ### Preparation
 To avoid constrains during the 1h interview, the following steps can be done prior:
 - Download the given repository
-- Setup a Git Repository for your code.
 - Access the data and inspect the formats
-- Setup your environment
-- Ensure your username variable is setup in the .env (you need to create)
+- Inspect the config.py and the image.png to help you on your development.
+- Setup your environment (installs requirements in a dedicated environment to avoid package conflicts)
 - # ENSURE EVERY HELPER (Copilot, ChatGPT, etc... is disabled)
 
 ### Data
@@ -43,34 +40,18 @@ Once the final table is ready, save it into a folder called results such has:
 
 Your code should be structured, efficient, and easily reproducible.
 
-### 📊 Dashboard Requirements
-Develop a 3-chart dashboard to perform data quality analysis.
-The dashboard should enable monitoring of key metrics such as:
-1. Missing Values – Track the evolution of missing data across columns or datasets.
-2. Unmerged Rows – Quantify records that could not be matched during the merging process.
-3. Duplicate Entries – Detect and analyze duplication patterns in the datasets.
-
-🧭 The dashboard can be developed within a Jupyter Notebook, and it should be able to read from pre-computed intermediate files if needed.
--
 
 ### ⚙️ Deliverables & Execution
-The workflow should be developed in the pulled repository and should run through the given main.py
-
-Package your full project in a local Docker container.
-
-Include a Dockerfile or docker-compose.yml that builds and runs the pipeline.
-
-Develop your dashboard inside a notebook that can be executed after the pipeline runs.
+The workflow should be developed in the pulled repository and should run through the given main.py or a notebook using `run_all`
 
 At the end of the interview, you’ll be asked to:
 
-Push your code into setup repithub.
+- Run the pipeline
+- Test the final output
+- Explaine your code
 
-Run the container to generate the final dataset.
 
-Execute the notebook cells to display your dashboard.
-
-💡 Tip: You may persist intermediate outputs (e.g., CSV or Parquet files) for reuse within the dashboard.
+💡 Tip: You may persist intermediate outputs (e.g., CSV or Parquet files).
 
 ### Final Data Format
 
@@ -96,44 +77,39 @@ The following diagram illustrates the intended relationship between the differen
 | **Version Control**                | Commit quality, branching, and GitHub organization    |
 
 ### Helpfull Tips:
-- When reading the data files:
+- When sourcing the data files:
   1. Inspect Encoding
-  2. Inspect seprators format
-  3. Column Names can be found in the `config.py`
+  2. Inspect separators format
 
 
 # French Version
 
 ## 🧠 Test Technique – Data Engineering
 ### 🎯 Objectif
-L’objectif de ce test est de démontrer vos compétences complètes en ingénierie et analyse de données.
-Vous devrez concevoir un pipeline de données complet — depuis la collecte de sources hétérogènes, jusqu’à la nettoyage, la transformation, la fusion et l’analyse — le tout dans un environnement conteneurisé et reproductible à l’aide de Docker.
 
-Ce test vise à évaluer votre capacité à :
+L’objectif de ce challenge est de démontrer vos compétences en data engineering et en analyse de données de bout en bout.
+Vous devrez concevoir un petit pipeline de données complet — depuis la collecte de données hétérogènes jusqu’au nettoyage, la transformation, la fusion et le stockage — le tout dans un notebook ou un script Python.
 
-1. Collecter des données issues de plusieurs formats et emplacements (CSV, TXT, Parquet, URL distante, S3).
+Plus précisément, ce test évaluera votre capacité à :
 
-2. Comprendre et nettoyer des structures de données complexes, en gérant les valeurs manquantes, incohérentes ou dupliquées.
-
-3. Écrire un code propre, modulaire et fonctionnel, bien organisé et documenté.
-
-4. Surveiller et analyser la qualité des données à l’aide de métriques et visualisations reproductibles.
-
-5. Conteneuriser votre projet pour une exécution locale via Docker.
-
-6. Utiliser GitHub pour un versionnement clair et structuré de votre travail.
+1 - Collecter des données à partir de multiples formats et emplacements (CSV, TXT, Parquet, URLs distantes et S3).
+2 - Comprendre et nettoyer des structures de données complexes, en gérant les valeurs manquantes, incohérentes ou dupliquées.
+3 - Écrire un code propre, modulaire et fonctionnel avec une documentation et une organisation appropriées.
+4 - Stocker votre dataset final dans le dossier results. Le nommer final.parquet et exécuter les tests.
 
 ### 🧰 Préparation
 
-Afin d’éviter toute contrainte pendant l’entretien (durée : 1 heure), les étapes suivantes peuvent être réalisées en amont :
+Afin d’éviter des contraintes pendant l’entretien d’une heure, les étapes suivantes peuvent être réalisées en amont :
 
-- Créez un dépôt Git pour votre code.
+Télécharger le repository fourni
 
-- Accédez aux données et explorez leurs formats respectifs.
+Accéder aux données et inspecter les formats
 
-- Configurez votre environnement de développement local.
+Examiner le config.py et le image.png pour vous guider dans votre développement
 
-- ⚠️ Assurez-vous de désactiver tout outil d’assistance (Copilot, ChatGPT, etc.).
+Configurer votre environnement (installer les dépendances dans un environnement dédié afin d’éviter les conflits de packages)
+
+⚠️ S’ASSURER QUE TOUT ASSISTANT (Copilot, ChatGPT, etc.) EST DÉSACTIVÉ
 
 ### 📦 Données
 #### Sources de données
@@ -147,44 +123,25 @@ Afin d’éviter toute contrainte pendant l’entretien (durée : 1 heure), les 
 
 ### 🧩 Tâche principale
 
-Nettoyez, transformez et fusionnez les quatre jeux de données en une table finale consolidée.
-Une fois la table finale prête, enregistrez-la dans un dossier appelé results, par exemple :
-`data-eng-interviews/results/final.parquet`
+Vous devez nettoyer, transformer et fusionner les quatre jeux de données en une table consolidée unique.
+Une fois la table finale prête, enregistrez-la dans un dossier nommé results, comme suit :
+data-eng-interviews/results/final.parquet
 
 Votre code doit être structuré, efficace et facilement reproductible.
 
-### 📊 Tableau de bord – Analyse de la qualité des données
+### ⚙️ Livrables & Exécution
 
-Créez un tableau de bord composé de trois graphiques permettant d’analyser la qualité des données.
-Ce tableau doit permettre le suivi des indicateurs suivants :
+Le workflow doit être développé dans le repository cloné et doit s’exécuter via le main.py fourni ou via un notebook utilisant run_all.
 
-1. Valeurs manquantes – Suivi de l’évolution des données manquantes par colonne ou par source.
+À la fin de l’entretien, il vous sera demandé de :
 
-2. Lignes non fusionnées – Quantification des enregistrements n’ayant pas pu être associés lors des jointures.
+Exécuter le pipeline
 
-3. Doublons – Détection et analyse des entrées dupliquées dans les différentes tables.
+Tester le résultat final
 
-🧭 Le tableau de bord peut être développé dans un notebook Jupyter et doit pouvoir lire des fichiers intermédiaires pré-calculés si nécessaire.
+Expliquer votre code
 
-### ⚙️ Livrables et exécution
-
-Le flux de travail doit être développé dans le dépôt cloné et exécuté via le fichier **main.py** fourni.
-
-Emballez l’ensemble du projet dans un conteneur Docker local.
-
-Fournissez un Dockerfile (ou docker-compose.yml) permettant de construire et exécuter le pipeline.
-
-Développez votre tableau de bord dans un notebook exécutable après le pipeline.
-
-À la fin de l’entretien, vous devrez :
-
-1. Pousser votre code sur le dépôt GitHub configuré.
-
-2. Lancer le conteneur Docker pour générer la table finale.
-
-3. Exécuter les cellules du notebook afin d’afficher le tableau de bord.
-
-💡 Astuce : vous pouvez enregistrer des sorties intermédiaires (fichiers CSV, Parquet, etc.) pour réutilisation dans le tableau de bord.
+💡 Astuce : Vous pouvez persister des sorties intermédiaires (par exemple en CSV ou Parquet)
 
 ### Format Final des Données
 - Colonnes autorisant des valeurs nulles : [cip7_code, cip13_code, dosage, condition_d_prescription] (les autres colonnes ne doivent pas contenir de valeurs nulles)
@@ -211,7 +168,6 @@ Le diagramme ci-dessous illustre la relation attendue entre les différentes sou
 | **Versionnement**                  | Qualité des commits, branches et organisation sur GitHub    |
 
 ## Conseils utiles:
-- Lors de la lecture des fichiers de données:
+- Lors de la collecte des fichiers de données :
   1. Vérifiez l’encodage
   2. Vérifiez le format des séparateurs
-  3. Les noms de colonnes se trouvent dans le `config.py`
